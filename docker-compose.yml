@@ -10,7 +10,7 @@ services:
 
          
     dvwa:
-        build: ./docker-vulnerable-dvwa
+        build: ./dvwa
         container_name: dvwa
         ports:
         - "80:80"

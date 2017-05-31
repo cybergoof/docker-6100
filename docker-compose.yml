@@ -1,0 +1,17 @@
+version: '2'
+services:
+    waf:
+        build: ./waf
+        container_name: waf
+        ports:
+        - "8080:8080"
+        links:
+        - dvwa
+
+         
+    dvwa:
+        build: ./docker-vulnerable-dvwa
+        container_name: dvwa
+        ports:
+        - "80:80"
+     

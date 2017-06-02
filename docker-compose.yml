@@ -1,17 +1,15 @@
 version: '2'
 services:
     waf:
-        build: ./waf
+        image: cybergoof/waf
         container_name: waf
         ports:
-        - "8080:8080"
+        - "8080:80"
         links:
         - dvwa
 
          
     dvwa:
-        build: ./dvwa
+        image: cybergoof/dvwa
         container_name: dvwa
-        ports:
-        - "80:80"
      

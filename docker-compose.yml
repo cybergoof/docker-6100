@@ -3,8 +3,10 @@ services:
     waf:
         image: cybergoof/waf
         container_name: waf
+        volumes:
+        - "./logs:/usr/local/nginx/logs"
         ports:
-        - "8080:80"
+        - "8080:8080"
         links:
         - dvwa
 
@@ -12,4 +14,6 @@ services:
     dvwa:
         image: cybergoof/dvwa
         container_name: dvwa
+        ports:
+
      

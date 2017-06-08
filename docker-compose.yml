@@ -4,16 +4,17 @@ services:
         image: cybergoof/waf
         container_name: waf
         volumes:
-        - "./logs:/usr/local/nginx/logs"
+        - "logs:/usr/local/nginx/logs"
         ports:
         - "8080:8080"
         links:
         - dvwa
+        command: /usr/local/bin/docker-compose -f /root/docker/6100/docker-compose.yml up
 
          
     dvwa:
         image: cybergoof/dvwa
         container_name: dvwa
-        ports:
+        
 
      
